@@ -35,8 +35,20 @@ button {
   border: none;
   font-size: 1.1rem;
   font-weight: 600;
-  color: black;
+  color: white;
+
   border: 1px solid black;
+}
+.btn-transperent{
+    padding: 16px 40px;
+    border-radius: 42px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+  background-color: transparent;
+    border: 1px solid black;
+    margin-left: 14px;
 }
 .description {
   font-size: 1rem;
@@ -46,7 +58,7 @@ button {
 
 /* header start */
 header {
-  background-color: black;
+    background: linear-gradient(180.00deg, rgb(17, 17, 17),rgba(119, 119, 119, 0) 1000%);
   height: auto;
   margin: 0px;
 }
@@ -63,7 +75,7 @@ header {
 
 .navbar-content-2 ul {
   display: flex;
-  border: 1px solid black;
+   border: 1px solid rgba(255, 255, 255, 0.1);
   gap: 47px;
   padding: 12px 22px 12px 5px;
   overflow: hidden;
@@ -72,7 +84,9 @@ header {
 .navbar-content-2 li {
   list-style: none;
 }
-
+.navbar-content-list img{
+    display: none;
+}
 .navbar-content-2 a {
   text-decoration: none;
   color: white;
@@ -101,7 +115,7 @@ header {
 }
 .header-content-1{
     /* height: 440px; */
-width: 520px;
+max-width: 520px;
 /* margin-bottom: 176px; */
 
 }
@@ -179,4 +193,39 @@ width: 520px;
     color: white;
     margin-bottom: 8px;
     margin-top: 12px;
+}
+
+
+
+
+
+
+
+/* media query */
+@media screen and (max-width:576px) {
+    
+    .navbar-content-list ul{
+        /* background-image: url(../icons/list.png); */
+        display: none;
+    }
+    .navbar-content-list img{
+        display: inline-block;
+        width: 30px;
+        height: 100%;
+        filter: brightness(0) invert(1);
+    }
+   .header-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    width: 75%;
+    text-wrap: wrap;
+   }
+    .header-content-1, .header-content-2{
+align-items: center;
+justify-content: center;
+    }
+    
+   
+
 }
